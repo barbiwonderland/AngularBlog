@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let x of album">
+      <div class="card m-3 p-2 text-center text-capitalize ">
+        <div class="card-title">
+          <div>{{x.title | titlecase}} </div>
+        </div>
+        <div class="card-body text-center mx-auto " >
+          <button class=" d-block mb-2 btn btn-secondary mr-3 w-100" routerLink="/photos/{{x.id}}">Galeria</button>
+     
+          <button class=" d-block mb-2 btn btn-secondary w-100" routerLink="/userDetails/{{x.id}}">Usuario</button>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

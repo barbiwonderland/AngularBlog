@@ -1,0 +1,21 @@
+<div class="container">
+  <button class="btn btn-secondary mb-3" (click)="goBack()">Volver</button>
+  <div class="row text-center">
+
+    <div class="col-md-4 mt-3" *ngFor="let x of userTodos">
+      <div class="card h-100">
+
+        <div class="card-title">
+          <p>ID {{x.id}}</p>
+          <h5>{{x.title}}</h5>
+        </div>
+        <div class="card-body">
+          <p [ngClass]="x.completed ? 'text-success' : 'text-danger'">
+            {{ x.completed ? "Completa" : "Incompleta" | uppercase }}</p>
+          <hr>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

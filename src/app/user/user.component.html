@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row user  ">
+    <!-- [class.selected]="x.id === selectedUser" -->
+    <div *ngFor="let x of users" class="col-md-4 text-center" (click)="selectedUser(x)">
+
+      <div class="card m-1">
+        <div class="card-body">
+          <div class="card-title">
+            <div routerLink="/userDetails/{{x.id}}">
+              Usuario: {{x.username}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- [childItem]="parentItem" -->
+  <!-- <app-user-detail [userDetail]="userInfo"></app-user-detail> -->

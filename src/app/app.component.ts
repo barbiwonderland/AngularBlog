@@ -1,3 +1,4 @@
+import { CrazyServiceService } from './crazy-service.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  prueba:any;
+  constructor(private puto:CrazyServiceService){
+
+  }
   title = 'alkemy-angularBlog';
+ngOnInit(){
+
 }
+
+    }
+  
+
+
+

@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="position-relative mx-auto">
+      <div *ngIf="photo!= null; else noPhoto"  [ngClass]="imgStatus === true ? 'reSize' : 'null'" class="text-center justify-content-center mx-auto">
+        <button (click)="deletePhoto(photo.id)" class=" btn positionEnd"><i class=" text-dark fa-lg fas fa-trash "></i></button>
+        <img (click)="clickEvent()" src="{{photo.url}}" alt="" width="250" height="250">
+      </div>
+
+    <div>
+        <ng-template #noPhoto>
+            <h5 class="text-white underline"> El usuario no tiene mas fotos </h5>
+        <hr class="bg-white">
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

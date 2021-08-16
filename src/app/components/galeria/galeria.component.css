@@ -1,0 +1,9 @@
+.reSize {
+  transform: scale(1.1);
+
+}
+.positionEnd{
+    top:0;
+    right: 0;
+    position: absolute;
+}

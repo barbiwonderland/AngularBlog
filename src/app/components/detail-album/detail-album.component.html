@@ -1,0 +1,18 @@
+<div class="container">
+
+  <div class="row   ">
+    <button class="btn btn-secondary mb-3 ml-4 " (click)="goBack()">Volver</button>
+
+    <div class="col-md-12">
+      <div class="card text-center mx-auto p-4 ">
+
+        <div class="" *ngIf="album">
+          <div class="" *ngFor="let x of album">
+            <div class="text-left"><i class="fas fa-angle-right"></i> {{x.title | titlecase}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

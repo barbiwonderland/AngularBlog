@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row ">
+    <div class="text-center mx-auto">
+      <form class="form-inline " (keyup)="getValue($event)">
+        <input type="text" class="form-control " name="selectedId"  placeholder="Buscar por ID">
+      </form>
+    </div>
+
+  </div>
+  <div class="row text-center">
+
+    <div class="col-md-4 mt-3" *ngFor="let x of todo">
+      <div class="card h-100">
+        <div class="card-title">
+          <p>ID {{x.id}}</p>
+          <h5>{{x.title}}</h5>
+        </div>
+        <div class="card-body">
+          <p [ngClass]="x.completed ? 'text-success' : 'text-danger'">
+            {{ x.completed ? "Completa" : "Incompleta" | uppercase }}</p>
+            <div (click)="updateStatus(x.id)" class=" text-success"><i class="fas fa-check"></i></div>
+          <hr>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container ">
+  <div class="row ">
+    <button class="btn btn-secondary mt-5" (click)="goBack()">Volver</button>
+    <div class="col-md-12 mt-5">
+      <div class="card p-4 ">
+        <div *ngIf="userInfo" class="text-center">
+          <h5> Nombre: {{userInfo.name}}</h5>
+          <h5> Sitio Web: {{userInfo.website}}
+          </h5>
+          <h5> Nombre de la empresa: {{userInfo.company.name}}
+          </h5>
+          <div class="text-center mt-3">
+            <button routerLink="/posts/{{userInfo.id}}" class=" btn btn-secondary mr-3">Posteos</button>
+        
+            <button routerLink="/albums/{{userInfo.id}}" class=" btn btn-secondary mr-3">Albums</button>
+        
+            <button  routerLink="/todos/{{userInfo.id}}"  class="btn btn-secondary mr-3">Todo's</button>
+       
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
