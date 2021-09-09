@@ -13,6 +13,7 @@ export class ToDoComponent implements OnInit {
   todo: ITodosModel[]=[];
   selectedId?: number;
   // Información generica
+  // Mejorar interfax
   data?: any;
   constructor(private _todoService: TodosService) {}
 

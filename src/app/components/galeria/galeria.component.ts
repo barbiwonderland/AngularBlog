@@ -19,6 +19,7 @@ export class GaleriaComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+
     this.userId = Number(this.route.snapshot.paramMap.get('id'));
     this.GaleriaService.getPhotos(this.userId).subscribe((data) => {
       console.log(data);
@@ -27,6 +28,7 @@ export class GaleriaComponent implements OnInit {
   }
 
   deletePhoto(x: any) {
+    // Mejorar *********
      this.photo=null;
     // this.photo = this.photo.filter((y: any) => y.id !== x);
     this.GaleriaService.deletePhoto(x).subscribe(() => {

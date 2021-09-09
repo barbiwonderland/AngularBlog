@@ -14,7 +14,6 @@ export class DetailPostComponent implements OnInit {
   constructor(
     private detailPostService: UserServiceService,
     private route: ActivatedRoute,
-    private location: Location
   ) {}
   singlePost?: Array<IPost> ;
   userId?: number;
@@ -26,7 +25,5 @@ export class DetailPostComponent implements OnInit {
       console.log(this.singlePost);
     });
   }
-  // goBack(): void {
-  //   this.location.back();
-  // }
+
 }

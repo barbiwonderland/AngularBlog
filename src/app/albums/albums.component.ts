@@ -8,7 +8,6 @@ import { IAlbumModel } from '../models/album.model';
   styleUrls: ['./albums.component.css'],
 })
 export class AlbumsComponent implements OnInit {
-  // album?:AlbumModel;
   album?: IAlbumModel[];
   constructor(private _AlbumService: AlbumService) {}
 

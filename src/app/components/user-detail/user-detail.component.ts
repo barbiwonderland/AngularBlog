@@ -9,19 +9,14 @@ import { IUser } from 'src/app/models/user.model';
   styleUrls: ['./user-detail.component.css'],
 })
 export class UserDetailComponent implements OnInit {
-  // children?
-  // @Input() userDetail?: User;
   constructor(
     private userService: UserServiceService,
     private route: ActivatedRoute,
-    private location: Location
   ) {}
   userId?: number;
   userInfo?: IUser;
 
-  // goBack(): void {
-  //   this.location.back();
-  // }
+
 
   ngOnInit(): void {
     // asigno valor

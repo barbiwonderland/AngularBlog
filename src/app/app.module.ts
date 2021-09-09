@@ -2,7 +2,7 @@ import { ToDoComponent } from './to-do/to-do.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { PostsComponent } from './posts/posts.component';
 import { UserComponent } from './user/user.component';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,7 @@ import { DetailPostComponent } from './components/detail-post/detail-post.compon
 import { DetailAlbumComponent } from './components/detail-album/detail-album.component';
 import { DetailTodosComponent } from './components/detail-todos/detail-todos.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ComeBackButtonComponent } from './components/come-back-button/come-back-button.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FooterComponent } from './components/footer/footer.component';
     DetailAlbumComponent,
     DetailTodosComponent,
     FooterComponent,
+    ComeBackButtonComponent,
     
   ],
   imports: [

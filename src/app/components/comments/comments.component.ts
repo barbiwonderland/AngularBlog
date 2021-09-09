@@ -14,7 +14,6 @@ export class CommentsComponent implements OnInit {
   constructor(
     private commentService: PostService,
     private activatedRoute: ActivatedRoute,
-    private Location:Location
   ) {}
 
   ngOnInit(): void {
