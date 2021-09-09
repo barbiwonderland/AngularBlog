@@ -1,6 +1,7 @@
 import { TodosService } from './todos.service';
 import { Component, OnInit } from '@angular/core';
 import { ThrowStmt } from '@angular/compiler';
+import { ITodosModel } from '../models/todos.model';
 
 @Component({
   selector: 'app-to-do',
@@ -9,7 +10,7 @@ import { ThrowStmt } from '@angular/compiler';
 })
 export class ToDoComponent implements OnInit {
   // Se ve en pantalla
-  todo?: any;
+  todo: ITodosModel[]=[];
   selectedId?: number;
   // Información generica
   data?: any;

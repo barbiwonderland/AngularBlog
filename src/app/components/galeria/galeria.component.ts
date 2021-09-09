@@ -1,7 +1,7 @@
-import { CrazyServiceService } from './../../crazy-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { PostService } from 'src/app/services/post-service.service';
 @Component({
   selector: 'app-galeria',
   templateUrl: './galeria.component.html',
@@ -13,7 +13,7 @@ export class GaleriaComponent implements OnInit {
   imgStatus: boolean = false;
   userId?: number;
   constructor(
-    private GaleriaService: CrazyServiceService,
+    private GaleriaService: PostService,
     private route: ActivatedRoute,
     private location: Location
   ) {}
@@ -27,7 +27,7 @@ export class GaleriaComponent implements OnInit {
   }
 
   deletePhoto(x: any) {
-    this.photo=null;
+     this.photo=null;
     // this.photo = this.photo.filter((y: any) => y.id !== x);
     this.GaleriaService.deletePhoto(x).subscribe(() => {
       console.log(`foto con ${x}ID eliminada`);

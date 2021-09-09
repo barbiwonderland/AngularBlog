@@ -1,4 +1,4 @@
-export interface TodosModel {
+export interface ITodosModel {
   userId: number;
   id: number;
   title: string;

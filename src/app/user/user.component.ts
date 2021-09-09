@@ -1,6 +1,7 @@
-import { User } from '../models/user.model';
-import { CrazyServiceService } from './../crazy-service.service';
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
+import { IUser } from '../models/user.model';
+import { UserServiceService } from '../services/user-service.service';
 
 @Component({
   selector: 'app-user',
@@ -8,16 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css'],
 })
 export class UserComponent implements OnInit {
-  users: Array<User> = [];
-  userInfo?:User;
+  users?: Array<IUser>;
+  userInfo?: IUser;
 
-  constructor(private userService: CrazyServiceService) {}
+  constructor(private userService: UserServiceService) {}
 
-  selectedUser(x:User){
-    this.userInfo={...x}
-    console.log(this.userInfo)
+  selectedUser(x: IUser) {
+    this.userInfo = { ...x };
+    console.log(this.userInfo);
   }
-
 
   ngOnInit() {
     this.userService.getUsers().subscribe((data) => {

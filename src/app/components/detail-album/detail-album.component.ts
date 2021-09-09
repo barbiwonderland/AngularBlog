@@ -1,7 +1,8 @@
 import { ActivatedRoute } from '@angular/router';
-import { CrazyServiceService } from './../../crazy-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { IAlbumModel } from 'src/app/models/album.model';
+import { UserServiceService } from 'src/app/services/user-service.service';
 @Component({
   selector: 'app-detail-album',
   templateUrl: './detail-album.component.html',
@@ -9,9 +10,9 @@ import { Location } from '@angular/common';
 })
 export class DetailAlbumComponent implements OnInit {
   userId?: number;
-  album?: any;
+  album?: Array<IAlbumModel>=[];
   constructor(
-    private detailAlbum: CrazyServiceService,
+    private detailAlbum: UserServiceService,
     private route: ActivatedRoute,
     private location: Location
   ) {}
@@ -23,7 +24,5 @@ export class DetailAlbumComponent implements OnInit {
       console.log(this.album);
     });
   }
-  goBack(): void {
-    this.location.back();
-  }
+
 }

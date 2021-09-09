@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../models/post.model';
+import { IPost } from '../models/post.model';
 import { PostService } from './post.service';
 @Component({
   selector: 'app-posts',
@@ -8,8 +8,8 @@ import { PostService } from './post.service';
 })
 export class PostsComponent implements OnInit {
   constructor(private postService: PostService) {}
-  posts?: Array<Post>;
-  seleccionado?: Post;
+  posts?: IPost[];
+  seleccionado?: IPost;
   mostrar:boolean=false;
   ngOnInit(): void {
     this.postService.getPosts().subscribe((data) => {

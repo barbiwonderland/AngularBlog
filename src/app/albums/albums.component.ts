@@ -1,6 +1,6 @@
 import { AlbumService } from './album.service';
 import { Component, OnInit } from '@angular/core';
-import { AlbumModel } from '../models/album.model';
+import { IAlbumModel } from '../models/album.model';
 
 @Component({
   selector: 'app-albums',
@@ -9,7 +9,7 @@ import { AlbumModel } from '../models/album.model';
 })
 export class AlbumsComponent implements OnInit {
   // album?:AlbumModel;
-  album?: any;
+  album?: IAlbumModel[];
   constructor(private _AlbumService: AlbumService) {}
 
   ngOnInit(): void {

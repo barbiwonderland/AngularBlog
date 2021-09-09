@@ -1,7 +1,9 @@
 import { ActivatedRoute } from '@angular/router';
-import { CrazyServiceService } from './../../crazy-service.service';
+import {  PostService } from '../../services/post-service.service';
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { UserServiceService } from 'src/app/services/user-service.service';
+import { IPost } from 'src/app/models/post.model';
 
 @Component({
   selector: 'app-detail-post',
@@ -10,11 +12,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailPostComponent implements OnInit {
   constructor(
-    private detailPostService: CrazyServiceService,
+    private detailPostService: UserServiceService,
     private route: ActivatedRoute,
     private location: Location
   ) {}
-  singlePost?: any;
+  singlePost?: Array<IPost> ;
   userId?: number;
 
   ngOnInit(): void {
@@ -24,7 +26,7 @@ export class DetailPostComponent implements OnInit {
       console.log(this.singlePost);
     });
   }
-  goBack(): void {
-    this.location.back();
-  }
+  // goBack(): void {
+  //   this.location.back();
+  // }
 }

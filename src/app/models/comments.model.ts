@@ -1,7 +1,7 @@
-interface Comments {
-    postId: number;
-    id: number;
-    name: string;
-    email: string;
-    body: string;
-  }
+export interface ICommentModel {
+  body?: string;
+  email?: string;
+  id?: number;
+  name?: string;
+  postId?: number;
+}

@@ -1,7 +1,8 @@
 import { ActivatedRoute } from '@angular/router';
-import { CrazyServiceService } from './../../crazy-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
+import { UserServiceService } from 'src/app/services/user-service.service';
+import { ITodosModel } from 'src/app/models/todos.model';
 
 @Component({
   selector: 'app-detail-todos',
@@ -9,10 +10,10 @@ import { Location } from '@angular/common';
   styleUrls: ['./detail-todos.component.css'],
 })
 export class DetailTodosComponent implements OnInit {
-  userTodos?: any;
+  userTodos?: Array<ITodosModel>;
   userId?: number;
   constructor(
-    private SingleTodo: CrazyServiceService,
+    private SingleTodo: UserServiceService,
     private route: ActivatedRoute,
     private location: Location
   ) {}
